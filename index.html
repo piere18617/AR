@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#000000">
+    <title>Ocean Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="viewer" aria-label="Ocean Explorer headset view">
+      <section class="eye" aria-label="Left eye">
+        <img class="scene-image" src="intro.jpg" alt="Ocean introduction">
+        <video class="scene-video" src="ocean.mp4" muted playsinline preload="none"></video>
+      </section>
+      <section class="eye" aria-label="Right eye">
+        <img class="scene-image" src="intro.jpg" alt="">
+        <video class="scene-video" src="ocean.mp4" muted playsinline preload="none"></video>
+      </section>
+      <div class="divider" aria-hidden="true"></div>
+      <div class="message" role="status" aria-live="polite" hidden>
+        <p class="message-text"></p>
+        <button class="start-button" type="button" hidden>Tap to start video</button>
+      </div>
+    </main>
+  </body>
+</html>

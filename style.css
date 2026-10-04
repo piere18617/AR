@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+body {
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.viewer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  width: 100vw;
+  height: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: #000;
+}
+
+.eye {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.scene-image,
+.scene-video {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+.eye.show-image .scene-image,
+.eye.show-video .scene-video {
+  display: block;
+}
+
+.divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: rgb(255 255 255 / 12%);
+  pointer-events: none;
+}
+
+.message {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: min(88%, 28rem);
+  padding: 1.25rem;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 0.75rem;
+  background: rgb(0 20 32 / 92%);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.message[hidden],
+.start-button[hidden] {
+  display: none;
+}
+
+.message-text {
+  margin: 0;
+}
+
+.start-button {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 0.4rem;
+  background: #d8f4ff;
+  color: #002536;
+  font: inherit;
+  font-weight: 600;
+}
