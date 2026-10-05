@@ -10,6 +10,7 @@
   </head>
   <body>
     <main class="viewer" aria-label="Ocean Explorer headset view">
+      <canvas class="panorama-scene" aria-label="Interactive 360-degree underwater scene"></canvas>
       <section class="eye" aria-label="Left eye">
         <img class="scene-image" src="intro.jpg" alt="Ocean introduction">
         <video class="scene-video" src="ocean.mp4" muted playsinline preload="none"></video>
@@ -22,6 +23,10 @@
       <div class="message" role="status" aria-live="polite" hidden>
         <p class="message-text"></p>
         <button class="start-button" type="button" hidden>Tap to start video</button>
+      </div>
+      <div class="mode-controls">
+        <button class="motion-button" type="button">Enable 360° motion</button>
+        <button class="slideshow-button" type="button" hidden>Back to image and video</button>
       </div>
     </main>
   </body>
