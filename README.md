@@ -2,6 +2,12 @@
 
 This static webpage shows the included `intro.jpg` ocean illustration in both halves of the screen, waits five seconds, then plays the included eight-second `ocean.mp4` in both halves. When the video ends, it returns to the image and repeats. The video is muted and uses inline playback for mobile Safari.
 
+## Try 360° motion
+
+Tap **Enable 360° motion** to enter a generated underwater panorama, then move the phone to look around. On iPhone, open the GitHub Pages HTTPS address in Safari and allow motion access when prompted. iOS requires a tap before it grants sensor access. If motion is unavailable or denied, drag across the scene to look around instead. The two goggles views show the same panorama; this is not stereoscopic 3D.
+
+Tap **Back to image and video** to return to the original sequence.
+
 ## Media files
 
 The project includes:
