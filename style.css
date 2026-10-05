@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+body {
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.viewer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  width: 100vw;
+  height: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: #000;
+}
+
+.eye {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.panorama-scene {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  background: #001a2c;
+}
+
+.viewer.panorama-active .panorama-scene {
+  display: block;
+}
+
+.viewer.panorama-active .eye {
+  visibility: hidden;
+}
+
+.scene-image,
+.scene-video {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+.eye.show-image .scene-image,
+.eye.show-video .scene-video {
+  display: block;
+}
+
+.divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: rgb(255 255 255 / 12%);
+  pointer-events: none;
+}
+
+.message {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: min(88%, 28rem);
+  padding: 1.25rem;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 0.75rem;
+  background: rgb(0 20 32 / 92%);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.viewer.panorama-active .message {
+  top: calc(0.75rem + env(safe-area-inset-top));
+  left: 50%;
+  width: auto;
+  max-width: 90%;
+  padding: 0.55rem 0.8rem;
+  transform: translateX(-50%);
+  border: 0;
+  background: rgb(0 20 32 / 72%);
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+
+.message[hidden],
+.start-button[hidden],
+.mode-controls button[hidden] {
+  display: none;
+}
+
+.message-text {
+  margin: 0;
+}
+
+.start-button {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 0.4rem;
+  background: #d8f4ff;
+  color: #002536;
+  font: inherit;
+  font-weight: 600;
+}
+
+.mode-controls {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(0.75rem + env(safe-area-inset-bottom));
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 0.75rem;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.mode-controls button {
+  max-width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgb(255 255 255 / 35%);
+  border-radius: 999px;
+  background: rgb(0 20 32 / 88%);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  pointer-events: auto;
+}
+
+.viewer.panorama-active .mode-controls button {
+  background: rgb(0 20 32 / 72%);
+  font-size: 0.85rem;
+}
